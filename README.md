@@ -1,6 +1,8 @@
 ## TalkingData AdTracking Fraud Detection Challenge
 #### Can you detect fraudulent click traffic for mobile app ads?
 
+![descriptions](./img/kaggle01.png)
+
 ### File descriptions
 - train.csv - the training set
 - train_sample.csv - 100,000 randomly-selected rows of training data, to inspect data before downloading full set
