@@ -1,7 +1,11 @@
 ## TalkingData AdTracking Fraud Detection Challenge
 #### Can you detect fraudulent click traffic for mobile app ads?
 
-https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection
+: 모바일 앱 광고를 클릭 한 후 사용자가 앱을 다운로드할지 여부를 예측
+- 프로젝트 기간 : 2018.03.10 ~ 2018.04.28
+- 팀구성 : 3인 (캐글뽀개기 스터디그룹 https://www.facebook.com/groups/kagglebreak/)
+- 기술 및 인프라 : Microsoft Azure, Rstudio ( data.table, dplyr, ggplot2, h2o.packages, lightgbm )
+- 대회 링크 : https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection
 
 ![descriptions](./img/kaggle01.png)
 
