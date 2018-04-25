@@ -1,6 +1,8 @@
 ## TalkingData AdTracking Fraud Detection Challenge
 #### Can you detect fraudulent click traffic for mobile app ads?
 
+https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection
+
 ![descriptions](./img/kaggle01.png)
 
 ### File descriptions
