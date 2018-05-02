@@ -1,0 +1,74 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+## test_supplement EDA
+```{r}
+test_sup <- fread("test_supplement.csv", header = TRUE, sep = ",")
+
+test_sup <- as.data.table(test_sup)
+test_sup[, click_time := ymd_hms(click_time)]
+test_sup[,  `:=` (day, day(click_time))]
+test_sup[, `:=` (hour, hour(click_time))]
+test_sup <- test_sup[, -c("click_time")]
+test_sup[, day := as.factor(day)]
+test_sup[, hour := as.factor(hour)]
+
+summary(test_sup)
+```
+
+
+```{r}
+test_sup %>%
+  ggplot(aes(hour, fill = day)) +
+  geom_bar() +
+  geom_density(alpha=.5)
+```
+
+## test subset EDA (submit 파일)
+```{r}
+test_sub <- fread("test_data.csv", header = TRUE, sep = ",")
+
+test_sub <- as.data.table(test_sub)
+test_sub[, click_time := ymd_hms(click_time) + hours(8)]
+test_sub[,  `:=` (day, day(click_time))]
+test_sub[, `:=` (hour, hour(click_time))]
+test_sub <- test_sub[, -c("click_time")]
+test_sub[, day := as.factor(day)]
+test_sub[, hour := as.factor(hour)]
+
+summary(test_sub)
+```
+
+```{r}
+test_sub[,c("day", "hour")] %>% table
+```
+
+
+```{r}
+test_sub %>%
+  ggplot(aes(hour, fill = day)) +
+  geom_bar() +
+  geom_density(alpha=.5)
+```
+most_freq_hours_in_test_data <- c("4","5","9","10","13","14")
+least_freq_hours_in_test_data <- c("6","11","15")
+
+```{r}
+test_sub[,c("day", "hour")] %>% table
+```
+
+
+```{r}
+test_sub %>%
+  ggplot(aes(hour, fill = day)) +
+  geom_bar() +
+  geom_density(alpha=.5)
+```
+most_freq_hours_in_test_data <- c("12","13","17","18","21","22")
+least_freq_hours_in_test_data <- c("14","19","23")
+
+
+
